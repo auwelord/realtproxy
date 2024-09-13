@@ -24,8 +24,6 @@ console.log(url)
     }
 });
 
-const PORT = process.env.PROXY_PORT;
-console.log(PORT)
-app.listen(PORT, () => {
-  console.log(`Proxy server running on port ${PORT}`);
+app.listen(3001, () => {
+  console.log(`Proxy server running on port 3001`);
 });
