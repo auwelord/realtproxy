@@ -8,10 +8,7 @@ app.use(cors());
 
 app.get('/proxy', async (req, res) => {
 
-    console.log(req.query)
     const url = req.query.url;
-
-console.log(url)
 
     try {
         const response = await fetch(url);
