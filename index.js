@@ -30,8 +30,6 @@ app.get('/proxy', async (req, res) =>
 {
     const url = req.query.url;
 
-    console.log(url)
-
     try {
         const response = await fetch(url);
         const data = await response.buffer();
@@ -40,7 +38,6 @@ app.get('/proxy', async (req, res) =>
     } 
     catch (error) 
     {
-        console.error("Error fetching image")
         console.error(error)
         res.status(500).send('Error fetching the image.');
     }
